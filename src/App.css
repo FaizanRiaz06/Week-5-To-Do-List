@@ -1,38 +1,75 @@
+/* App.css */
+
+body {
+  background-color: #f0f0f0; /* Light grey background for a modern look */
+  font-family: 'Arial', sans-serif; /* Clean font style */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
 .App {
+  background-color: #ffffff; /* White background for the app container */
+  border-radius: 10px; /* Rounded corners for the container */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 30px;
+  width: 100%;
+  max-width: 400px; /* Fixed max width to keep the app centered */
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  margin-bottom: 20px;
+  color: #333; /* Darker text color for the title */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input {
+  padding: 10px;
+  width: calc(100% - 100px); /* Adjusted width to fit with button */
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button {
+  padding: 10px 15px;
+  background-color: #6200ea; /* Primary button color */
+  color: #ffffff; /* Button text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px; /* Space between input and task list */
+  text-align: left; /* Align tasks to the left */
+}
+
+li {
+  background-color: #fafafa; /* Light background for each task */
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for tasks */
 }
 
-.App-link {
-  color: #61dafb;
+li.completed {
+  text-decoration: line-through;
+  color: #888; /* Lighter text color for completed tasks */
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li button:nth-child(1) {
+  background-color: #4cf436; /* Red color for delete button */
+  margin-left: 10px;
+}
+li button {
+  background-color: #f44336; /* Red color for delete button */
+  margin-left: 10px;
 }
